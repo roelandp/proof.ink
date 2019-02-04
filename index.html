@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Primary Meta Tags -->
+  <title>Proof.ink - proven immutable files!</title>
+  <meta name="title" content="Proof.ink - proven immutable files!">
+  <meta name="description" content="File hashes stored on the Steem blockchain. Tamperproof blockchain-based file fingerprint integrity.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://proof.ink/">
+  <meta property="og:title" content="Proof.ink - proven immutable files!">
+  <meta property="og:description" content="File hashes stored on the Steem blockchain. Tamperproof blockchain-based file fingerprint integrity.">
+  <meta property="og:image" content="https://proof.ink/img/fb-social.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://proof.ink/">
+  <meta property="twitter:title" content="Proof.ink - proven immutable files!">
+  <meta property="twitter:description" content="File hashes stored on the Steem blockchain. Tamperproof blockchain-based file fingerprint integrity.">
+  <meta property="twitter:image" content="https://proof.ink/img/tw-social.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="roelandp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style type="text/css">
+  body {
+    font-family: "Calibre",sans-serif;
+    color: #212529;
+    font-feature-settings: 'liga','kern';
+    text-rendering: optimizeLegibility;
+  }
+
+  .bgbrand {
+    background-image:url('img/splash.svg');
+    background-repeat: no-repeat;
+    background-position: -52px -120px;
+    background-size: 300px 300px;
+  }
+  h1,h2,h3,h4,h5,h6 {
+
+    font-family: 'Raleway', sans-serif;
+  }
+
+  section {
+    margin: 5rem auto;
+  }
+
+  .home {
+    cursor: pointer;
+  }
+
+  .progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container bgbrand">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- <nav class="my-2 my-md-0 mr-md-3"> -->
+      <a href="https://proof.ink" style="text-decoration:none;"><h2 class="text-white home">proof</h2></a>
+      <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-primary"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-auto" id="navbarText">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item text-right">
+            <a class="p-2 text-dark proofit" href="#proofit"><i>proof something</i></a>
+          </li>
+          <li class="nav-item text-right">
+          <small><i>&nbsp; or <a href="#validate" class="p-2 verifyit text-dark">validate</a></i></small>
+          </li>
+          <li class="nav-item text-right"> | </li>
+          <li class="nav-item text-right">
+            <a class="p-2 text-dark about" href="#about">about</a>
+          </li>
+          <li class="nav-item text-right">
+            <a class="p-2 text-dark faq" href="#about">faq</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <section class="page-header">
+    <div id="carouselExampleSlidesOnly" class="carousel d-flex" data-ride="false" data-interval="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row d-flex">
+            <div class="col-sm-6 align-self-center">
+              <h1>Proven immutable data<sup>*</sup></h1>
+              <p><b>File hashes stored on the <a href="#about" target="_blank">Steem</a> blockchain</b></p>
+              <p><small>* data: documents, files, images, music, zip, software, 1010101000, etcetera</small>
+              <p class="mt-4">
+                <a class="btn btn-info btn-lg proofit" href="#proof" id="proofit"><b>proof</b> something</a> &nbsp;&nbsp; or <a href="#validate" class="verifyit">validate</a>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <img src="img/undraw_agreement.svg" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row d-flex">
+            <div class="col-sm-6 align-self-center">
+              <h2 id="pyftitle">Proof your file </h2>
+              <div class="form-group" id="filehashform">
+                  <p><b>Step 1:</b> Select file to be fingerprinted</p>
+                  <label class="btn btn-info btn-lg" for="document">
+                      <input id="document" type="file" style="display:none" accept='*'><b>select</b> file
+                  </label>
+                  <span class='label label-info' id="upload-file-info"></span>
+
+                  <!-- <input type="file" id="document" class="form-control" accept='*' placeholder="Select file"/>
+                  <p><small>Your file will NOT be uploaded, but fingerprinted in this browser based session</small></p> -->
+              </div>
+              <div id="postonchainform" style="display:none;">
+                <p><b>Step 2:</b> Store the fingerprint on the immutable Steem blockchain</p>
+                <p><small>Note that the fingerprint and any additional posted data is publicly verifyable and visible on the steem blockchain.</small></p>
+                <p><small>Don't have a Steem account? <a href="https://signup.steemit.com" target="_blank">Sign up here</a>.</small></p>
+                <a class="btn btn-info btn-lg postit" href="#posttosteem"><b>store</b> fingerprint</a>
+              </div>
+              <!-- <div class="form-group">
+                  <label for="hash">Hash</label>
+                  <input type="text" id="hash" class="form-control"/>
+              </div>
+              <div class="form-group">
+                  <label for="fileSize">File size</label>
+                  <input type="text" id="fileSize" class="form-control"/>
+              </div> -->
+
+
+
+            </div>
+            <div class="col-sm-6">
+              <div id="info">
+                <img src="img/undraw_meeting_115p.svg" class="img-fluid" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 id="storefp_h2">Store fingerprint</h2>
+              <p id="storefp_p"><b>All data displayed on the right is stored <span class="bg-success text-white p-1">publicly</span> on the Steem chain</b></p>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col-sm-4 align-self-center">
+              <div class="card" id="whattostore">
+
+                <div class="card-body">
+                  <h5 class="card-title">1. Add additional data to store</h5>
+                   <p class="card-text">Storing the fingerprint is obligatory, the rest of the data you can optionally add yourself:</p>
+                   <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="chk_fingerprint" disabled="disabled" checked="checked">
+                     <label class="form-check-label" for="chk_fingerprint">
+                       fingerprint: <code id="prev_fingerprint"></code>
+                     </label>
+                   </div>
+                  <div class="form-check">
+                    <input class="form-check-input topost" type="checkbox" value="" id="chk_filename">
+                    <label class="form-check-label" for="chk_filename">
+                      filename: <code id="prev_filename"></code>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input topost" type="checkbox" value="" id="chk_filesize">
+                    <label class="form-check-label" for="chk_filesize">
+                      filesize: <code id="prev_filesize"></code>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input topost" type="checkbox" value="" id="chk_chunks">
+                    <label class="form-check-label" for="chk_chunks">
+                      chunks: <code id="prev_chunks"></code>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input topost" type="checkbox" value="" id="chk_created">
+                    <label class="form-check-label" for="chk_created">
+                      created: <code id="prev_created"></code>
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="col-sm-8">
+              <div id="previewjson">
+
+              </div>
+              <div id="formpostinputs">
+                <hr />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p><small>The fingerprint will be stored utilising the public transfer method.<br />Therefore you need to pick an (any) amount of Steem or SBD you need to send.<br />Your donation will be used to maintain this service.</small></p>
+                    <p><small>Don't have a Steem account? <a href="https://signup.steemit.com" target="_blank">Sign up here</a></small></p>
+                    <h5 class="card-title">2. Set amount</h5>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">
+                    Amount:
+                  </label>
+                  <div class="col-sm-1">
+                    </div>
+                  <div class="col-sm-4">
+                    <input class="form-control form-control-sm text-right topost" placeholder="amount" type="number" step="0.001" value="9.999" id="amount" />
+                  </div>
+                  <div class="col-sm-4">
+                    <select class="form-control form-control-sm topost" id="currency">
+                      <option value="STEEM" selected>STEEM</option>
+                      <option value="SBD">SBD</option>
+                    </select>
+                  </div>
+                </div>
+                <hr />
+                <h5>3. Post fingerprint to the Steem chain via</h5>
+                <div id="postbuts"></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="mb-3">Tamperproof blockchain-based file fingerprint integrity</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <p>Proof.ink's service is pretty straightforward. <b>If you have a document of which you want to know with 100% certainty that it's contents has not been changed, tampered with or altered in any form, use Proof.ink.</b></p>
+              <p>Proof.ink works by <b>fingerprinting your file</b> (no matter how big), without the need to upload it, inside your browser. The result of this calculation is a unique SHA256 hash / fingerprint of your file.</p>
+            </div>
+            <div class="col-sm-4">
+              <p>By enabling you to <b>store the fingerprint publicly on the <a href="https://steem.com" target="_blank">Steem blockchain</a></b>, Proof.ink can guarantee the integrity of the fingerprint of the file as how it was created at a given time by a given user. This way others can use this service to validate the fingerprint on the blockchain and against the file they receive.</p>
+              <p>The Steem chain serves as a public accessible ledger with provable immutability at it's core, for a trustless public store of the derived file's fingerprint.</p>
+            </div>
+            <div class="col-sm-4">
+              <p><img src="img/undraw_building_blocks.svg" class="img-fluid" /></p>
+              <p class="text-center">Proof.ink is made by <a href="https://steemit.com/@roelandp" target="_blank">@roelandp</a><br /><small><a href="https://steemit.com/@roelandp" target="_blank">learn more</a> - <a href="https://github.com/roelandp/proof" target="_blank">view source</a></small></p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row d-flex">
+            <div class="col-sm-6 align-self-center">
+              <div class="form-group" id="filehashform2">
+                <h2 id="pyftitle">Validate your file</h2>
+                  <p>So you have received a file along with a <code>proof.ink.*.txt</code> certificate file and want to validate the integrity of the original file?</p>
+                  <p><b>Step 1:</b> Select files to be validated. Select both the original file and the <code>proof.ink.*.txt</code> certificate file in one go.</p>
+                  <label class="btn btn-info btn-lg" for="documentvalidate">
+                      <input id="documentvalidate" type="file" style="display:none" accept='*' multiple><b>select</b> original file + proof.ink.txt
+                  </label>
+                  <span class='label label-info' id="upload-file-info"></span>
+
+                  <!-- <input type="file" id="document" class="form-control" accept='*' placeholder="Select file"/>
+                  <p><small>Your file will NOT be uploaded, but fingerprinted in this browser based session</small></p> -->
+              </div>
+              <div id="postonchainform2" style="display:none;">
+              </div>
+              <!-- <div class="form-group">
+                  <label for="hash">Hash</label>
+                  <input type="text" id="hash" class="form-control"/>
+              </div>
+              <div class="form-group">
+                  <label for="fileSize">File size</label>
+                  <input type="text" id="fileSize" class="form-control"/>
+              </div> -->
+
+
+
+            </div>
+            <div class="col-sm-6">
+              <div id="info2">
+                <img src="img/undraw_server_status.svg" class="img-fluid" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="mb-3">Questions &amp; Answers</h3>
+              <dl>
+                <dt>What do you do with my files?</dt>
+                <dd>Actually.... Nothing! This site (or app if you will) solely run in your browser. The fingerprinting happens without the need for you to upload your data. Try it! You can disconnect from the internet if you want. After the fingerprinting you can store the resulting 'hash' or fingerprint on the Steem blockchain. </dd>
+
+                <dt>What is a hash/checksum/fingerprint?</dt>
+                <dd>From Wikipedia: A checksum is a small-sized datum derived from a block of digital data. Checksums are often used to verify data integrity but are not relied upon to verify data authenticity.</dd>
+
+                <dt>Why is hashing useful for proving file integrity? </dt>
+                <dd>
+                  <ul>
+                    <li>The hashing function used on this site is meant for one-way, so infeasible to invert. </li>
+                    <li>The fingerprint is deterministic so the same data always results in the same fingerprint. This fact is used to help you prove the immutability of a given file you want to analyse using Proof.ink</li>
+                    <li>Depending on the filesize, it is quick to compute the hash</li>
+                    <li>It is infeasible to generate a message from its hash value except by trying all possible messages</li>
+                    <li>A small change to a document should change the fingerprint so extensively that the new fingerprint appears uncorrelated with the old fingerprint</li>
+                    <li>It is infeasible to find two different messages with the same fingerprint</li>
+                  </ul>
+                </dd>
+
+                <dt>What is the Steem Blockchain?</dt>
+                <dd>The Steem blockchain is a decentralised proof of stake blockchain with 3 second blocktimes and quick confirmations. By using the Steem blockchain Proof.ink can build a trustless store of fingerprints on a blockchain which responds near instant and therefore keep the service "snappy". A fingerprint is ready while you wait, depending on your processor speed and filesize, and storing them doesn't take longer than 3 seconds if you have a Steem account readily available. </dd>
+
+                <dt>How can I get a Steem account? </dt>
+                <dd>Steem is a free to use blockchain. Registerring an account however costs a little bit of Steem currency (3 Steem at the time of writing). Some faucets issueing free accounts do exist, but have a waiting time of 2 weeks or more. You can easily signup for a paid account (think 2-4 dollars at time of writing) via for example the <a href="https://steemwallet.app" target="_blank">SteemWallet.app - opensource mobile Steem Wallet for iOS and Android</a> or other options via <a href="https://signup.steemit.com" target="_blank">this site</a>.</dd>
+
+                <dt>How much does your service cost?</dt>
+                <dd>Storing the fingerprint on the Steem chain is done by sending a public transfer to the @proof.ink account on the Steem chain, including your 'fingerprint' in the message's "memo"-field. Intrinsic to transferring is that you need to send a bit of Steem or Steem dollars along. It is up to you to decide how much Steem you send. Any funds you send will be used to maintain the service. A recommended amount is pre-filled, but you can go as low as 0.001 Steem/SBD or as high as sending all the Steem/SBD you have!</dd>
+
+                <dt>Who are you?</dt>
+                <dd>My name is RoelandP, I am a huge fan of the Steem and related graphene chains. Here are some of my links: <a href="https://github.com/roelandp" target="_blank">github</a>, <a href="https://twitter.com/@roelandp" target="_blank">twitter</a>, <a href="https://steemit.com/@roelandp" target="_blank">steem blog</a> and my <a href="https://roelandp.nl" target="_blank">personal landingpage</a>.</dd>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+
+  </footer>
+
+  <div class="modal" tabindex="-1" role="dialog" id="qrmodal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Scan QRcode</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="qrcode"></div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="manualmodal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Post fingerprint manually</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Send a transaction to <code class="bg-success text-white p-1">@proof.ink</code> on the Steem blockchain using for example <a href="https://steemit.com" target="_blank">Steemit</a>, <a href="https://busy.org" target="_blank">Busy</a>, <a href="https://esteem.app" target="_blank">eSteem</a> or <a href="https://steempeak.com" target="_blank">SteemPeak</a>.</p>
+          <div class="form-group">
+            <label for="manualmodaltextarea"><b>Copy paste the following text in the <code class="bg-success text-white p-1">memo</code>-field:</b></label>
+            <textarea class="form-control code" id="manualmodaltextarea" rows="4" onclick="this.focus();this.select()" readonly="readonly"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="./crypto-js.js"></script>
+<script src="./index.js?v=3"></script>
+</body>
+</html>
