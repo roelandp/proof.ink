@@ -69,12 +69,12 @@ function compareResults() {
         //console.log('ALL GOOD, ALL THE SAME!');
         var html = `
           <h2>Fingerprint match!</h2><h2 class="mb-4 mt-4"><code>${fileobj['hash']}</code></h2>
-          <p><b>With 100% certainty we can guarantee that the fingerprint of the file <code>${fileobj['filename']}</code>, matches the one stored on <code >${blockchainobj['block']['result']['timestamp']}</code> in block <code>${blockchainobj['tx']['block_num']}</code> on the Steem blockchain.</b></p>
+          <p><b>With 100% certainty we can guarantee that the fingerprint of the file <code>${fileobj['filename']}</code>, matches the one stored on <code >${blockchainobj['block']['result']['timestamp']}</code> in block <code>${blockchainobj['tx']['block_num']}</code> on the Hive blockchain.</b></p>
           <p>Follow the links below to see the transaction in various block explorers:</p>
           <p>
-          <a class="btn btn-primary mr-2 tt" href="https://steemd.com/b/${blockchainobj['tx']['block_num']}\#${blockchainobj['tx']['transaction_id']}" target="_blank">SteemD</a>
-          <a class="btn btn-primary mr-2 tt" href="https://steemdb.com/block/${blockchainobj['tx']['block_num']}" target="_blank">SteemDB</a>
-          <a class="btn btn-primary mr-2 tt" href="https://steemblockexplorer.com/block/${blockchainobj['tx']['block_num']}" target="_blank">Steem Block Explorer</a>
+          <a class="btn btn-primary mr-2 tt" href="https://hiveblocks.com/b/${blockchainobj['tx']['block_num']}\#${blockchainobj['tx']['transaction_id']}" target="_blank">HiveBlocks</a>
+          <a class="btn btn-primary mr-2 tt" href="https://hive-db.com/block/${blockchainobj['tx']['block_num']}" target="_blank">Hive DB</a>
+          <a class="btn btn-primary mr-2 tt" href="https://hiveblockexplorer.com/block/${blockchainobj['tx']['block_num']}" target="_blank">Hive Block Explorer</a>
           </p>
         `;
         $('#postonchainform2').html(html);
@@ -299,15 +299,15 @@ function b64u_enc(data) {
   return window.btoa(data).replace(/(\+|\/|=)/g, function(stri){ return b64u_lookup[stri];});
 }
 
-function steemkeychain() {
+function hivekeychain() {
 
   var amount = parseFloat($('#amount').val());
   if(!amount || amount == 0) {
-    alert('Please adjust the amount of steem/sbd');
+    alert('Please adjust the amount of hive/hbd');
   }
   var currency = $('#currency').val();
 
-  steem_keychain.requestTransfer('__signer', 'proof.ink', amount, JSON.stringify(jsonobj), currency, function(response) {
+  hive_keychain.requestTransfer('__signer', 'proof.ink', amount, JSON.stringify(jsonobj), currency, function(response) {
 
   });
 }
@@ -342,7 +342,7 @@ function foundProof(tx) {
   blockdata = tx;
   $('#postbuts').html('');
   $('#formpostinputs').html('');
-  $('#whattostore').html('<p>Your proof was recorded on the Steem blockchain in <b>block #'+tx['block_num']+'</b>.</p><p>Please <a href="#saveproof" onclick="saveProof()">save the proof.txt</a> file alongside the original file.<br/><br/>Use it whenever you need to proof the integrity, simply by visiting proof.ink again.</p><p><a class="btn btn-warning btn-lg mr-2" title="Save Proof" onclick="saveProof()" href="#saveproof"><b>save</b> proof.ink.txt</a></p>');
+  $('#whattostore').html('<p>Your proof was recorded on the Hive blockchain in <b>block #'+tx['block_num']+'</b>.</p><p>Please <a href="#saveproof" onclick="saveProof()">save the proof.txt</a> file alongside the original file.<br/><br/>Use it whenever you need to proof the integrity, simply by visiting proof.ink again.</p><p><a class="btn btn-warning btn-lg mr-2" title="Save Proof" onclick="saveProof()" href="#saveproof"><b>save</b> proof.ink.txt</a></p>');
   $('#whattostore').removeClass('card');
   $('#storefp_h2').text('Great success!');
   $('#storefp_p').html('Your fingerprint is now immutably stored.');
@@ -350,7 +350,7 @@ function foundProof(tx) {
 }
 
 function getBlock(num, cb) {
-  $.ajax({url: "https://api.steemit.com",
+  $.ajax({url: "https://api.hive.blog",
     data: '{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":['+num+'], "id":1}',
     dataType: 'json',
     type: 'POST',
@@ -393,7 +393,7 @@ function getBlock(num, cb) {
 
       }
       // if(result.result.head_block_number > lastcheckedblock) {
-      //     // need to fetch block from steemit.
+      //     // need to fetch block from Hive.
       //
       //     getBlock(result.result.head_block_number);
       // }
@@ -403,7 +403,7 @@ function getBlock(num, cb) {
     });
 }
 function getChain() {
-  $.ajax({url: "https://api.steemit.com",
+  $.ajax({url: "https://api.hive.blog",
     data: '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}',
     dataType: 'json',
     type: 'POST',
@@ -411,7 +411,7 @@ function getChain() {
       //witness = (result.result.current_witness);
       ////console.log(result.result.head_block_number);
       if(result.result.head_block_number > lastcheckedblock) {
-          // need to fetch block from steemit.
+          // need to fetch block from Hive.
 
           getBlock(result.result.head_block_number);
       }
@@ -428,22 +428,22 @@ function prepUrls() {
 
   var amount = parseFloat($('#amount').val());
   if(!amount || amount == 0) {
-    alert('Please adjust the amount of steem/sbd');
+    alert('Please adjust the amount of hive/hbd');
   }
   var currency = $('#currency').val();
 
-  uris['steemuri'] = "steem://sign/transfer/proof.ink/"+encodeURIComponent(amount+' '+currency)+"/"+b64u_enc(JSON.stringify(jsonobj));
-  uris['steemconnect'] = 'https://steemconnect.com/sign/transfer?to=proof.ink&amount='+encodeURIComponent(amount+' '+currency)+'&memo='+encodeURIComponent(JSON.stringify(jsonobj));
+  uris['hiveuri'] = "hive://sign/transfer/proof.ink/"+encodeURIComponent(amount+' '+currency)+"/"+b64u_enc(JSON.stringify(jsonobj));
+  uris['hivesigner'] = 'https://hivesigner.com/sign/transfer?to=proof.ink&amount='+encodeURIComponent(amount+' '+currency)+'&memo='+encodeURIComponent(JSON.stringify(jsonobj));
   qrcode.clear();
-  qrcode.makeCode(uris['steemuri']);
+  qrcode.makeCode(uris['hiveuri']);
 
-  var steem_keychain = '';
-  if(window.steem_keychain) {
-    // Steem Keychain extension installed...
-    steem_keychain = '<button type="button" class="btn btn-primary mr-2 tt" onclick="steemkeychain()" data-toggle="tooltip" title="A browser based plugin for storing Steem keys and signing transactions">Steem Keychain</button>';
+  var hive_keychain = '';
+  if(window.hive_keychain) {
+    // Hive Keychain extension installed...
+    hive_keychain = '<button type="button" class="btn btn-primary mr-2 tt" onclick="hivekeychain()" data-toggle="tooltip" title="A browser based plugin for storing Hive keys and signing transactions">Hive Keychain</button>';
   }
 
-  $('#postbuts').html('<a class="btn btn-primary mr-2 tt" href="'+uris['steemconnect']+'" target="_blank" data-toggle="tooltip" title="A third party tool handling the signing &amp; broadcasting of Steem transactions">SteemConnect</a> <a class="btn btn-primary mr-2 tt" href="'+uris['steemuri']+'" data-toggle="tooltip" title="Sign with steem:// supported app such as Vessel or SteemWallet" target="_blank">Steem://</a> <button type="button" class="btn btn-primary mr-2 tt" data-toggle="modal" data-target="#qrmodal" title="Scan QR code with your phone to launch steem:// supported app">QR Code</button> '+ steem_keychain + ' <button type="button" class="btn btn-primary mr-2 tt" data-toggle="modal" data-target="#manualmodal" title="Open instructions for manual transfer">Manual</button>');
+  $('#postbuts').html('<a class="btn btn-primary mr-2 tt" href="'+uris['hivesigner']+'" target="_blank" data-toggle="tooltip" title="A third party tool handling the signing &amp; broadcasting of Hive transactions">HiveSigner</a> <a class="btn btn-primary mr-2 tt" href="'+uris['hiveuri']+'" data-toggle="tooltip" title="Sign with hive:// supported app such as Vessel or HiveWallet" target="_blank">Hive://</a> <button type="button" class="btn btn-primary mr-2 tt" data-toggle="modal" data-target="#qrmodal" title="Scan QR code with your phone to launch hive:// supported app">QR Code</button> '+ hive_keychain + ' <button type="button" class="btn btn-primary mr-2 tt" data-toggle="modal" data-target="#manualmodal" title="Open instructions for manual transfer">Manual</button>');
   ////console.log(uris);
   $('.tt').tooltip();
   if(!blockchainmonitoring) {

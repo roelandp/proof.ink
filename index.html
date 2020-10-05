@@ -5,20 +5,20 @@
   <!-- Primary Meta Tags -->
   <title>Proof.ink - proven immutable files!</title>
   <meta name="title" content="Proof.ink - proven immutable files!">
-  <meta name="description" content="File hashes stored on the Steem blockchain. Tamperproof blockchain-based file fingerprint integrity.">
+  <meta name="description" content="File hashes stored on the Hive blockchain. Tamperproof blockchain-based file fingerprint integrity.">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://proof.ink/">
   <meta property="og:title" content="Proof.ink - proven immutable files!">
-  <meta property="og:description" content="File hashes stored on the Steem blockchain. Tamperproof blockchain-based file fingerprint integrity.">
+  <meta property="og:description" content="File hashes stored on the Hive blockchain. Tamperproof blockchain-based file fingerprint integrity.">
   <meta property="og:image" content="https://proof.ink/img/fb-social.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://proof.ink/">
   <meta property="twitter:title" content="Proof.ink - proven immutable files!">
-  <meta property="twitter:description" content="File hashes stored on the Steem blockchain. Tamperproof blockchain-based file fingerprint integrity.">
+  <meta property="twitter:description" content="File hashes stored on the Hive blockchain. Tamperproof blockchain-based file fingerprint integrity.">
   <meta property="twitter:image" content="https://proof.ink/img/tw-social.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -118,7 +118,7 @@
             <a class="p-2 text-dark faq" href="#about">faq</a>
           </li>
           <li class="nav-item text-right">
-            <a class="p-2 steemwallet-widget" href="https://steemwallet.app/widget/widget.html?referrer=proof.ink" data-referrer="proof.ink" data-name="Proof.ink" data-image="https://proof.ink/apple-touch-icon.png" title="Register a Steem account">sign up</a>
+            <a class="p-2" href="https://signup.hive.io" title="Register a Hive account">sign up</a>
           </li>
         </ul>
       </div>
@@ -130,7 +130,7 @@
           <div class="row d-flex">
             <div class="col-sm-6 align-self-center">
               <h1>Proven immutable data<sup>*</sup></h1>
-              <p><b>File hashes stored on the <a href="#about" target="_blank">Steem</a> blockchain</b></p>
+              <p><b>File hashes stored on the <a href="#about" target="_blank">Hive</a> blockchain</b></p>
               <p><small>* data: documents, files, images, music, zip, software, 1010101000, etcetera</small>
               <p class="mt-4">
                 <a class="btn btn-info btn-lg proofit" href="#proof" id="proofit"><b>proof</b> something</a> &nbsp;&nbsp; or <a href="#validate" class="verifyit">validate</a>
@@ -156,10 +156,10 @@
                   <p><small>Your file will NOT be uploaded, but fingerprinted in this browser based session</small></p> -->
               </div>
               <div id="postonchainform" style="display:none;">
-                <p><b>Step 2:</b> Store the fingerprint on the immutable Steem blockchain</p>
-                <p><small>Note that the fingerprint and any additional posted data is publicly verifyable and visible on the steem blockchain.</small></p>
-                <p><small>Don't have a Steem account? <a class="steemwallet-widget" href="https://steemwallet.app/widget/widget.html?referrer=proof.ink" data-referrer="proof.ink" data-name="Proof.ink" data-image="https://proof.ink/apple-touch-icon.png" title="Register a Steem account">Buy one instantly!</a>.</small></p>
-                <a class="btn btn-info btn-lg postit" href="#posttosteem"><b>store</b> fingerprint</a>
+                <p><b>Step 2:</b> Store the fingerprint on the immutable Hive blockchain</p>
+                <p><small>Note that the fingerprint and any additional posted data is publicly verifyable and visible on the hive blockchain.</small></p>
+                <p><small>Don't have a Hive account? <a href="https://signup.hive.io" data-referrer="proof.ink" data-name="Proof.ink" data-image="https://proof.ink/apple-touch-icon.png" title="Register a Hive account">Get one instantly!</a>.</small></p>
+                <a class="btn btn-info btn-lg postit" href="#posttohive"><b>store</b> fingerprint</a>
               </div>
               <!-- <div class="form-group">
                   <label for="hash">Hash</label>
@@ -185,7 +185,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 id="storefp_h2">Store fingerprint</h2>
-              <p id="storefp_p"><b>All data displayed on the right is stored <span class="bg-success text-white p-1">publicly</span> on the Steem chain</b></p>
+              <p id="storefp_p"><b>All data displayed on the right is stored <span class="bg-success text-white p-1">publicly</span> on the Hive chain</b></p>
             </div>
           </div>
           <div class="row d-flex">
@@ -240,8 +240,8 @@
                 <hr />
                 <div class="row">
                   <div class="col-sm-12">
-                    <p><small>The fingerprint will be stored utilising the public transfer method.<br />Therefore you need to pick an (any) amount of Steem or SBD you need to send.<br />Your donation will be used to maintain this service.</small></p>
-                    <p><small>Don't have a Steem account? <a href="https://signup.steemit.com" target="_blank">Sign up here</a></small></p>
+                    <p><small>The fingerprint will be stored utilising the public transfer method.<br />Therefore you need to pick an (any) amount of Hive or HBD you need to send.<br />Your donation will be used to maintain this service.</small></p>
+                    <p><small>Don't have a Hive account? <a href="https://signup.hive.io" target="_blank">Sign up here</a></small></p>
                     <h5 class="card-title">2. Set amount</h5>
                   </div>
                 </div>
@@ -256,13 +256,13 @@
                   </div>
                   <div class="col-sm-4">
                     <select class="form-control form-control-sm topost" id="currency">
-                      <option value="STEEM" selected>STEEM</option>
-                      <option value="SBD">SBD</option>
+                      <option value="HIVE" selected>HIVE</option>
+                      <option value="HBD">HBD</option>
                     </select>
                   </div>
                 </div>
                 <hr />
-                <h5>3. Post fingerprint to the Steem chain via</h5>
+                <h5>3. Post fingerprint to the Hive chain via</h5>
                 <div id="postbuts"></div>
 
               </div>
@@ -281,12 +281,12 @@
               <p>Proof.ink works by <b>fingerprinting your file</b> (no matter how big), without the need to upload it, inside your browser. The result of this calculation is a unique SHA256 hash / fingerprint of your file.</p>
             </div>
             <div class="col-sm-4">
-              <p>By enabling you to <b>store the fingerprint publicly on the <a href="https://steem.com" target="_blank">Steem blockchain</a></b>, Proof.ink can guarantee the integrity of the fingerprint of the file as how it was created at a given time by a given user. This way others can use this service to validate the fingerprint on the blockchain and against the file they receive.</p>
-              <p>The Steem chain serves as a public accessible ledger with provable immutability at it's core, for a trustless public store of the derived file's fingerprint.</p>
+              <p>By enabling you to <b>store the fingerprint publicly on the <a href="https://hive.io" target="_blank">Hive blockchain</a></b>, Proof.ink can guarantee the integrity of the fingerprint of the file as how it was created at a given time by a given user. This way others can use this service to validate the fingerprint on the blockchain and against the file they receive.</p>
+              <p>The Hive chain serves as a public accessible ledger with provable immutability at it's core, for a trustless public store of the derived file's fingerprint.</p>
             </div>
             <div class="col-sm-4">
               <p><img src="img/undraw_building_blocks.svg" class="img-fluid" /></p>
-              <p class="text-center">Proof.ink is made by <a href="https://steemit.com/@roelandp" target="_blank">@roelandp</a><br /><small><a href="https://steemit.com/@roelandp" target="_blank">learn more</a> - <a href="https://github.com/roelandp/proof" target="_blank">view source</a></small></p>
+              <p class="text-center">Proof.ink is made by <a href="https://hive.blog/@roelandp" target="_blank">@roelandp</a><br /><small><a href="https://hive/@roelandp" target="_blank">learn more</a> - <a href="https://github.com/roelandp/proof" target="_blank">view source</a></small></p>
 
             </div>
           </div>
@@ -336,10 +336,10 @@
               <h3 class="mb-3">Questions &amp; Answers</h3>
               <dl>
                 <dt>What do you do with my files?</dt>
-                <dd>Actually.... Nothing! This site (or app if you will) solely run in your browser. The fingerprinting happens without the need for you to upload your data. Try it! You can disconnect from the internet if you want. After the fingerprinting you can store the resulting 'hash' or fingerprint on the Steem blockchain. </dd>
+                <dd>Actually.... Nothing! This site (or app if you will) solely run in your browser. The fingerprinting happens without the need for you to upload your data. Try it! You can disconnect from the internet if you want. After the fingerprinting you can store the resulting 'hash' or fingerprint on the Hive blockchain. </dd>
 
                 <dt>What do you need from me?</dt>
-                <dd>Well... You need a file to be fingerprinted. And then you need a Steem account. Don't have one? <a class="steemwallet-widget" href="https://steemwallet.app/widget/widget.html?referrer=proof.ink" data-referrer="proof.ink" data-name="Proof.ink" data-image="https://proof.ink/apple-touch-icon.png" title="Register a Steem account">Sign up instantly now</a>!</dd>
+                <dd>Well... You need a file to be fingerprinted. And then you need a Hive account. Don't have one? <a href="https://signup.hive.io" data-referrer="proof.ink" data-name="Proof.ink" data-image="https://proof.ink/apple-touch-icon.png" title="Register a Hive account">Sign up instantly now</a>!</dd>
 
                 <dt>What is a hash/checksum/fingerprint?</dt>
                 <dd>From Wikipedia: A checksum is a small-sized datum derived from a block of digital data. Checksums are often used to verify data integrity but are not relied upon to verify data authenticity.</dd>
@@ -356,17 +356,17 @@
                   </ul>
                 </dd>
 
-                <dt>What is the Steem Blockchain?</dt>
-                <dd>The Steem blockchain is a decentralised proof of stake blockchain with 3 second blocktimes and quick confirmations. By using the Steem blockchain Proof.ink can build a trustless store of fingerprints on a blockchain which responds near instant and therefore keep the service "snappy". A fingerprint is ready while you wait, depending on your processor speed and filesize, and storing them doesn't take longer than 3 seconds if you have a Steem account readily available. </dd>
+                <dt>What is the Hive Blockchain?</dt>
+                <dd>The Hive blockchain is a decentralised proof of stake blockchain with 3 second blocktimes and quick confirmations. By using the Hive blockchain Proof.ink can build a trustless store of fingerprints on a blockchain which responds near instant and therefore keep the service "snappy". A fingerprint is ready while you wait, depending on your processor speed and filesize, and storing them doesn't take longer than 3 seconds if you have a Hive account readily available. </dd>
 
-                <dt>How can I get a Steem account? </dt>
-                <dd>Steem is a free to use blockchain. Registerring an account however costs a little bit of Steem currency (3 Steem at the time of writing). Some faucets issueing free accounts do exist, but have a waiting time of 2 weeks or more. You can easily signup for a paid account (think 2-4 dollars at time of writing) via for example the <a href="https://steemwallet.app" target="_blank">SteemWallet.app - opensource mobile Steem Wallet for iOS and Android</a> or <a class="steemwallet-widget" href="https://steemwallet.app/widget/widget.html?referrer=proof.ink" data-referrer="proof.ink" data-name="Proof.ink" data-image="https://proof.ink/apple-touch-icon.png" title="Register a Steem account">directly on Proof.ink</a> for a small fee.</dd>
+                <dt>How can I get a Hive account? </dt>
+                <dd>Hive is a free to use blockchain. Registerring an account however costs a little bit of Hive currency (3 Hive at the time of writing). Some faucets issueing free accounts do exist, but have a waiting time of 2 weeks or more. You can easily signup for a paid account (think 2-4 dollars at time of writing) via for example the <a href="https://hivewallet.app" target="_blank">HiveWallet.app - opensource mobile Hive Wallet for iOS and Android</a> or <a href="https://signup.hive.io" data-referrer="proof.ink" data-name="Proof.ink" data-image="https://proof.ink/apple-touch-icon.png" title="Register a Hive account">directly on Proof.ink</a> for a small fee.</dd>
 
                 <dt>How much does your service cost?</dt>
-                <dd>Storing the fingerprint on the Steem chain is done by sending a public transfer to the @proof.ink account on the Steem chain, including your 'fingerprint' in the message's "memo"-field. Intrinsic to transferring is that you need to send a bit of Steem or Steem dollars along. It is up to you to decide how much Steem you send. Any funds you send will be used to maintain the service. A recommended amount is pre-filled, but you can go as low as 0.001 Steem/SBD or as high as sending all the Steem/SBD you have!</dd>
+                <dd>Storing the fingerprint on the Hive chain is done by sending a public transfer to the @proof.ink account on the Hive chain, including your 'fingerprint' in the message's "memo"-field. Intrinsic to transferring is that you need to send a bit of Hive or Hive dollars along. It is up to you to decide how much Hive you send. Any funds you send will be used to maintain the service. A recommended amount is pre-filled, but you can go as low as 0.001 Hive/HBD or as high as sending all the Hive/HBD you have!</dd>
 
                 <dt>Who are you?</dt>
-                <dd>My name is RoelandP, I am a huge fan of the Steem and related graphene chains. Here are some of my links: <a href="https://github.com/roelandp" target="_blank">github</a>, <a href="https://twitter.com/@roelandp" target="_blank">twitter</a>, <a href="https://steemit.com/@roelandp" target="_blank">steem blog</a> and my <a href="https://roelandp.nl" target="_blank">personal landingpage</a>.</dd>
+                <dd>My name is RoelandP, I am a huge fan of the Hive and related graphene chains. Here are some of my links: <a href="https://github.com/roelandp" target="_blank">github</a>, <a href="https://twitter.com/@roelandp" target="_blank">twitter</a>, <a href="https://hive.blog/@roelandp" target="_blank">hive blog</a> and my <a href="https://roelandp.nl" target="_blank">personal landingpage</a>.</dd>
               </dl>
             </div>
           </div>
@@ -410,7 +410,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Send a transaction to <code class="bg-success text-white p-1">@proof.ink</code> on the Steem blockchain using for example <a href="https://steemit.com" target="_blank">Steemit</a>, <a href="https://busy.org" target="_blank">Busy</a>, <a href="https://esteem.app" target="_blank">eSteem</a> or <a href="https://steempeak.com" target="_blank">SteemPeak</a>.</p>
+          <p>Send a transaction to <code class="bg-success text-white p-1">@proof.ink</code> on the Hive blockchain using for example <a href="https://hive.blog" target="_blank">Hive.blog</a>, <a href="https://busy.org" target="_blank">Busy</a>, <a href="https://ecency.app" target="_blank">Ecency</a> or <a href="https://peakd.com" target="_blank">PeakD</a>.</p>
           <div class="form-group">
             <label for="manualmodaltextarea"><b>Copy paste the following text in the <code class="bg-success text-white p-1">memo</code>-field:</b></label>
             <textarea class="form-control code" id="manualmodaltextarea" rows="4" onclick="this.focus();this.select()" readonly="readonly"></textarea>
@@ -423,7 +423,6 @@
     </div>
   </div>
 <script src="./crypto-js.js"></script>
-<script src="./index.js?v=3"></script>
-<script type="text/javascript" src="https://steemwallet.app/widget/steemwalletwidget.min.js" async="true"></script>
+<script src="./index.js?v=4"></script>
 </body>
 </html>
